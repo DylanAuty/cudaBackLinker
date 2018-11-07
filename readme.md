@@ -1,9 +1,9 @@
 # cudaBackLinker
 
-A python script to deal with things that want CUDA 9.0 when 10.0 is installed. Does this by symlinking all CUDA 10.0 lib files to 9.0, leaning heavily on an assumption of backwards compatibility.
+A python script to deal with things that want CUDA 9.0 when 10.0 is installed. Does this by symlinking all CUDA 10.0 lib files to 9.0, leaning heavily on an assumption of backwards compatibility. Since these assumptions may not be true, **I accept no responsibility for use of this script**.
 
 ## Usage
-`python3 cudaBackLinker.py /path/to/cuda/lib64`
+`sudo python3 cudaBackLinker.py /path/to/cuda/lib64`
 
 or 
 
@@ -19,5 +19,4 @@ Then this may be useful. It also will probably break something else somewhere el
 
 ## Why (not) to use this
 
-NVIDIA claim that CUDA driver is backwards compatible, but that the runtime *may* not be ([here](https://docs.nvidia.com/deploy/cuda-compatibility/index.html)) and ([here](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)). Even so, if you want to try then this may make your life easier. It may also make your life way harder. Your mileage may vary.
-
+NVIDIA claim that CUDA driver is backwards compatible, but that the runtime *may* not be ([here](https://docs.nvidia.com/deploy/cuda-compatibility/index.html)) and ([here](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)). Even so, if you want to try then this may make your life easier. It may also make your life ***way*** harder. Your mileage may vary.

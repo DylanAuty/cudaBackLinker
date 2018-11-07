@@ -9,7 +9,7 @@ def main():
 
 	files = [f for f in os.listdir(args.cudaPath[0]) if re.match(r'lib[a-z]*.so.10.0(.[0-9]*)*', f)]
 	for f in files:
-		os.symlink(f, (f.replace('.10', '.9', 1)))
+		os.symlink(os.path.join(args.cudaPath[0], f), (os.path.join(args.cudaPath[0], f.replace('.10', '.9', 1))))
 
 if __name__ == "__main__":
 	main()
